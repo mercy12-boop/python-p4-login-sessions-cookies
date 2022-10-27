@@ -11,6 +11,8 @@ class GroceryItem(db.Model, SerializerMixin):
     name = db.Column(db.String)
     price = db.Column(db.Float)
 
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+
     def __repr__(self):
         return f'<GroceryItem {self.name} | Price: ${self.price}>'
 
@@ -20,6 +22,8 @@ class User(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique=True)
     password = db.Column(db.String)
+
+    groceries = db.relationship('GroceryItem', backref=db.orm.backref('user'))
 
     def __repr__(self):
         return f'<User {self.username}>'
