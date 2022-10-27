@@ -55,6 +55,36 @@ $ python seed.py
 
 ***
 
+## Creating Users
+
+Before we can start authenticating, we need to create users. We can accomplish
+this easily with our SQLAlchemy skills in `models.py`:
+
+```py
+# app/models.py
+
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy_serializer import SerializerMixin
+
+db = SQLAlchemy()
+
+class GroceryItem(db.Model, SerializerMixin):
+    ...
+
+class User(db.Model, SerializerMixin):
+    __tablename__ = 'users'
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String, unique=True)
+    password = db.Column(db.String)
+
+    def __repr__(self):
+        return f'<User {self.username}>'
+
+```
+
+***
+
 ## Resources
 
 - [Introduction to Identity and Access Management (IAM) - auth0](https://auth0.com/docs/get-started/identity-fundamentals/identity-and-access-management)
