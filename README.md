@@ -1,4 +1,4 @@
-# Intro to Identity and Access Management
+# Flask-Login, Cookies, and Sessions
 
 ## Learning Goals
 
