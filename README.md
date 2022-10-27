@@ -26,36 +26,32 @@
 
 ## Introduction
 
-In our lessons up to this point, we have made websites that provide equal
-experiences to all users. This is perfect for certain types of websites, but
-most today aim to provide a tailored experience to the user. This requires
-a web application to keep track of the user through a **digital identity**.
+**Authentication** is the process of using pieces of a user's digital identity
+to allow or disallow access to a web application. This is typically accomplished
+with a username and password, though some institutions choose to use biometric
+data like fingerprints or multi-factor authentication (usually through use of a
+phone in addition to a username and password).
 
-Some companies like Meta are striving to make digital identities into close
-analogues for real identities, but most digital identities are fairly simple:
-a collection of traits that, when combined, uniquely identify a user of the
-application. If this sounds an awful lot like a database record, you're on
-the right track.
+> **Note: Authentication only determines whether or not a user can access an
+> application as a whole. Authorization is the process of determining which
+> resources they can access within the application- we'll learn more about that
+> later.**
 
-Digital identities can be stored in databases as records or in special
-**directory services** using a protocol called Lightweight Directory
-Access Protocol (or LDAP). For simplicity's sake, we will just be using SQLite
-in this module.
+Flask provides us with a simple bare-bones library called **Flask-Login** to
+handle authentication. In this introduction to authentication, we will be
+looking at a grocery list API and adding Flask-Login to tailor the experience
+to individual users.
 
-"Access Management" describes how we determine which identities have the rights
-to create, retrieve, update, or delete specific information. You've already seen
-this in the "Chatterbox" lab from this Phase- you could retrieve any message,
-but you could only create, update, or delete your own. Applications carry out
-access management through a combination of identity information and
-**authorization** policies that state which users can access what. These
-policies are usually designed for roles or groups (e.g. Teacher, Science
-Teachers) rather than identity-by-identity.
+Before we get started, run the following commands to configure your application
+and populate your database:
 
-Identity and Access Management (IAM) is a broad and rapidly evolving field
-underneath the software umbrella, and is thus typically carried out by a team of
-specialists rather than full-stack generalists. That being said, an
-understanding and appreciation of the field's basic concepts will allow you to
-start building identity-tailored applications in your career and on your own.
+```console
+$ pipenv install
+$ pipenv shell
+$ cd app
+$ flask db upgrade
+$ python seed.py
+```
 
 ***
 
