@@ -258,6 +258,62 @@ users.
 
 ***
 
+## Conclusion
+
+Cookies are foundational for the modern web.
+
+Most sites use cookies, to let their users log in, keep track of their shopping
+carts, or record other ephemeral session data. Almost nobody thinks these are
+bad uses of cookies: nobody really believes that you should have to type in your
+username and password on every page, or that your shopping cart should clear if
+you reload the page.
+
+But cookies let you store data in a user's browser, so by nature, they can be
+used for more controversial endeavors.
+
+For example, Google AdWords sets a cookie and uses that cookie to track what ads
+you've seen and which ones you've clicked on. The tracking information helps
+AdWords decide what ads to show you.
+
+This is why, if you click on an ad, you may find that the ad follows you around
+the internet. It turns out that this behavior is as effective as it is annoying:
+people are far more likely to buy things from ads that they've clicked on once.
+
+This use of cookies worries people and the EU
+[has created legislation around the use of cookies][eu_law].
+
+Cookies, like any technology, are a tool. In the rest of this module, we're going
+to be using them to let users log in. Whether you later want to use them in such
+a way that the EU passes another law is up to you.
+
+***
+
+## Check For Understanding
+
+Before you move on, make sure you can answer the following questions:
+
+<details>
+  <summary>
+    <em>1. What do we mean when we say that HTTP is stateless?</em>
+  </summary>
+
+  <p>Every HTTP request the server receives is independent. New requests do not
+     remember the requests that came before.</p>
+</details>
+<br/>
+
+<details>
+  <summary>
+    <em>1. What attribute do we need to set to ensure that data is encrypted in
+        Flask sessions?</em>
+  </summary>
+
+  <p><code>app.secret_key</code></p>
+</details>
+<br/>
+
+***
+
 ## Resources
 
 - [Introduction to Identity and Access Management (IAM) - auth0](https://auth0.com/docs/get-started/identity-fundamentals/identity-and-access-management)
