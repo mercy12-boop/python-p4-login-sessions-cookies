@@ -304,7 +304,7 @@ Before you move on, make sure you can answer the following questions:
 
 <details>
   <summary>
-    <em>1. What attribute do we need to set to ensure that data is encrypted in
+    <em>2. What attribute do we need to set to ensure that data is encrypted in
         Flask sessions?</em>
   </summary>
 
