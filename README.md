@@ -219,6 +219,10 @@ all the key/value pairs you set with `session`, converting them from a Python
 object into a big string. Whenever you set a key with the `session` module,
 Python updates the value of its session cookie to this big string.
 
+Furthermore, `session` is a part of the application's _request context_. This
+means that we don't have to create it manually or pass it as an argument to any
+of our views- it's accessible whenever the `request` is!
+
 When you set cookies this way, Flask **signs** them to prevent users from
 tampering with them. Your Flask server has a key, configured in
 your app:
