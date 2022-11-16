@@ -327,8 +327,8 @@ Before you move on, make sure you can answer the following questions:
 - [General Data Protection Regulation][eu_law]
 - [Legal Cookie Requirements][cookie policies]
 
-[http methods rfc]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html "HTTP RFC 9 — Method Definitions"
-[rfc_cookies]: http://tools.ietf.org/html/rfc6265 "HTTP State Management Mechanism"
+[http methods rfc]: https://www.rfc-editor.org/rfc/rfc9110.html
+[rfc_cookies]: http://tools.ietf.org/html/rfc6265
 [edit_this_cookie]: https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=en
 [flask session]: https://pythonbasics.org/flask-sessions/
 [eu_law]: https://en.wikipedia.org/wiki/General_Data_Protection_Regulation
